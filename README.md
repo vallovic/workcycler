@@ -73,7 +73,11 @@ I only tested this on Ubuntu but it should work without problems on other distri
 
 - Funny comments for the notifications
 
-- ??
+- Indicator integration
+
+- Your idea here (tell me what you want)
+
+- ???
 
 ## About
 
@@ -82,7 +86,7 @@ It´s my first ever python project - _I never touched python before_ - so the co
 
 ## Thanks
 
-Faenza Icons by tiheum: (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
+Faenza Icons by tiheum: http://tiheum.deviantart.com/art/Faenza-Icons-173323228
 
-Sound from: (http://freesounds.org)
+Sound from: http://freesounds.org
 
