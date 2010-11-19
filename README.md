@@ -82,7 +82,7 @@ It´s my first ever python project - _I never touched python before_ - so the co
 
 ## Thanks
 
-Faenza Icons by tiheum: [http://tiheum.deviantart.com/art/Faenza-Icons-173323228]
+Faenza Icons by tiheum: (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
 
-Sound from: [http://freesounds.org]
+Sound from: (http://freesounds.org)
 
