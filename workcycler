@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import gtk
+import pynotify
+import gconf
+
+from pygame import mixer
+from threading import Timer
+
+import workcycle
+import workcycle.ui.tray
+
+if __name__ == '__main__':
+    workcycle.ui.tray.WorkcycleTray().start()
+
