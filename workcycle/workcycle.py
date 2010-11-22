@@ -18,7 +18,6 @@ class Workcycle(object):
         self._init_notify()
         self._init_mixer()
         self._init_gconf()
-        self.start()
         
     def _init_gui(self):
         pass
