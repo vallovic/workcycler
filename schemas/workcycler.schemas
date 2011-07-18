@@ -5,9 +5,9 @@
       <applyto>/apps/workcycler/worktime</applyto>
       <owner>workcycler</owner>
       <type>int</type>
-      <default>30</default>
+      <default>25</default>
       <locale name="C">
-        <short>Worktime in minutes</short>
+        <short>Worktime in minutes.</short>
       </locale>
     </schema>
     <schema>
@@ -15,9 +15,19 @@
       <applyto>/apps/workcycler/funtime</applyto>
       <owner>workcycler</owner>
       <type>int</type>
-      <default>30</default>
+      <default>5</default>
       <locale name="C">
-        <short>Funtime in minutes</short>
+        <short>Funtime in minutes.</short>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/workcycler/longfuntime</key>
+      <applyto>/apps/workcycler/longfuntime</applyto>
+      <owner>workcycler</owner>
+      <type>int</type>
+      <default>20</default>
+      <locale name="C">
+        <short>Funtime in minutes.</short>
       </locale>
     </schema>
     <schema>
@@ -27,7 +37,7 @@
       <type>bool</type>
       <default>true</default>
       <locale name="C">
-        <short>Sound notification</short>
+        <short>Sound notification.</short>
       </locale>
      </schema>
   </schemalist>
