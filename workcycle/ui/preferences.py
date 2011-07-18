@@ -3,7 +3,7 @@ import gtk
 class WorkcyclePreferences():
     
     def __init__(self, client, gconf_dir):
-        dialog = gtk.Dialog("Workcycle Applet Preferences", None, 0, (gtk.STOCK_CANCEL, 
+        dialog = gtk.Dialog("Workcycler Applet Preferences", None, 0, (gtk.STOCK_CANCEL, 
                                                                       gtk.RESPONSE_CANCEL, 
                                                                       gtk.STOCK_OK, 
                                                                       gtk.RESPONSE_OK))
@@ -24,8 +24,16 @@ class WorkcyclePreferences():
         funtime_hbox.pack_start(funtime_input)
         funtime_hbox.pack_start(gtk.Label(" minutes"))
         
+        longfuntime_hbox = gtk.HBox(True)
+        longfuntime_label = gtk.Label("Long Funtime:")
+        longfuntime_input = gtk.Entry()
+        longfuntime_input.set_text(str(client.get_int(gconf_dir + '/longfuntime')))
+        longfuntime_hbox.pack_start(longfuntime_label)
+        longfuntime_hbox.pack_start(longfuntime_input)
+        longfuntime_hbox.pack_start(gtk.Label(" minutes"))
+        
         sound_hbox = gtk.HBox(True)
-        sound_label = gtk.Label("Enable sound:")
+        sound_label = gtk.Label("Enable Sound ?")
         sound_input = gtk.CheckButton()
         sound_input.set_active(client.get_bool(gconf_dir + '/enable_sound'))
         sound_hbox.pack_start(sound_label)
@@ -34,6 +42,7 @@ class WorkcyclePreferences():
         
         dialog.vbox.pack_start(worktime_hbox, True, True, 0)
         dialog.vbox.pack_start(funtime_hbox, True, True, 0)
+        dialog.vbox.pack_start(longfuntime_hbox, True, True, 0)
         dialog.vbox.pack_start(sound_hbox, True, True, 0)
         dialog.show_all()
         
@@ -42,6 +51,7 @@ class WorkcyclePreferences():
         if response == gtk.RESPONSE_OK:
             client.set_int(gconf_dir + '/worktime', int(worktime_input.get_text()))
             client.set_int(gconf_dir + '/funtime', int(funtime_input.get_text()))
+            client.set_int(gconf_dir + '/longfuntime', int(longfuntime_input.get_text()))
             client.set_bool(gconf_dir + '/enable_sound', sound_input.get_active())
             
         dialog.destroy()
